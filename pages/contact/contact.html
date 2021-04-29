@@ -8,12 +8,48 @@
 
 <ion-content padding>
   <h2>Daily Calorie Intake Calculator</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <br/>
+ 
+  <ion-item>
+    <ion-label color="dark"> Gender: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="gender">
+      <ion-option value="m">Male</ion-option>
+      <ion-option value="f">Female</ion-option>
+    </ion-select>
+</ion-item>
+
+<ion-item>
+    <ion-label>Height in meter: </ion-label>
+    <ion-input type="number" [(ngModel)]="height"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Weight in kilogram: </ion-label>
+    <ion-input type="number"[(ngModel)]="weight"></ion-input>
+  </ion-item>
+
+<ion-item>
+    <ion-label>Age: </ion-label>
+    <ion-input type="number"[(ngModel)]="age"></ion-input>
+  </ion-item>
+
+<ion-item>
+    <ion-label color="dark"> Activity Level: </ion-label>
+    <ion-select interface="popover">
+      <ion-option value="1.2">Sedentary lifestyle (little or no exercise)</ion-option>
+      <ion-option value="1.4">Slightly active lifestyle (light exercise or sports 1-2 days/week)</ion-option>
+      <ion-option value="1.6">Moderately active lifestyle (moderate exercise or sports 2-3 days/week)</ion-option>
+      <ion-option value="1.75">Very active lifestyle (hard exercise or sports 4-5 days/week)</ion-option>
+      <ion-option value="2.0">Extra active lifestyle (very hard exercise, physical job or sports 6-7 days/week)</ion-option>
+      <ion-option value="2.3">Professional athlete</ion-option>
+    </ion-select>
+</ion-item>
+
+<br/>
+
+<button ion-button color="secondary" (click)="calculateBMI()">
+  COMPUTE
+</button>
+
 </ion-content>
+
