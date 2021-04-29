@@ -6,7 +6,13 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-
+height: number;
+  weight: number;
+  calorie: number;
+  carbs: number;
+  protein: number;
+  fats: number;
+  calorieMessage: string;
   constructor(public navCtrl: NavController) {
 
   }
