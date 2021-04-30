@@ -9,31 +9,31 @@
 <ion-content padding>
   <h2>Daily Calorie Intake Calculator</h2>
   <br/>
- 
+
   <ion-item>
     <ion-label color="dark"> Gender: </ion-label>
     <ion-select interface="popover" [(ngModel)]="gender">
       <ion-option value="m">Male</ion-option>
       <ion-option value="f">Female</ion-option>
     </ion-select>
-</ion-item>
+  </ion-item>
 
-<ion-item>
-    <ion-label color="dark">Height in meter: </ion-label>
+  <ion-item>
+    <ion-label color="dark">Height in centimeter (cm): </ion-label>
     <ion-input type="number" [(ngModel)]="height"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label color="dark">Weight in kilogram: </ion-label>
-    <ion-input type="number"[(ngModel)]="weight"></ion-input>
+    <ion-label color="dark">Weight in kilogram (kg): </ion-label>
+    <ion-input type="number" [(ngModel)]="weight"></ion-input>
   </ion-item>
 
-<ion-item>
+  <ion-item>
     <ion-label color="dark">Age: </ion-label>
-    <ion-input type="number"[(ngModel)]="age"></ion-input>
+    <ion-input type="number" [(ngModel)]="age"></ion-input>
   </ion-item>
 
-<ion-item>
+  <ion-item>
     <ion-label color="dark"> Activity level: </ion-label>
     <ion-select interface="popover" [(ngModel)]="activityLevel">
       <ion-option value='1.2'>No Exercise</ion-option>
@@ -43,15 +43,25 @@
       <ion-option value='2.0'>6-7 Exercise per week</ion-option>
       <ion-option value='2.3'>Professional Athlete</ion-option>
     </ion-select>
-</ion-item>
+  </ion-item>
 
-<br/>
+  <br/>
 
-<button ion-button color="secondary" (click)="calculateBMR()">
+  <button ion-button color="secondary" (click)="calculateBMR()">
   COMPUTE
 </button>
 
-<br/>
+  <br/>
+
+  <ion-item *ngIf="bmr">
+    <h3><b> Daily Calorie Intake: {{calorie}} kcal / day <code> {{calorieMessage}} </code> 
+  <br/>
 
 <ion-item *ngIf= "bmr">
-  <h3><b> Daily Calorie Intake: {{calorie}} kcal / day <code> {{calorieMessage}} </code> 
+  <h3> Carbs: {{carbohydrates}} kcal <code> {{carboMessage}} </code> 
+
+<ion-item *ngIf= "bmr">
+  <h3> Proteins: {{proteins}} kcal <code> {{proteinsMessage}} </code> 
+
+<ion-item *ngIf= "bmr">
+  <h3> Fats: {{fats}} kcal <code> {{fatsMessage}} </code> 
