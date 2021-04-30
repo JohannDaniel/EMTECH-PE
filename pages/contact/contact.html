@@ -53,15 +53,38 @@
 
   <br/>
 
-  <ion-item *ngIf="bmr">
-    <h3><b> Daily Calorie Intake: {{calorie}} kcal / day <code> {{calorieMessage}} </code> 
-  <br/>
+<ion-card *ngIf= "bmr"> 
+  <ion-card-header>
+    <ion-card-title>Daily Calorie Intake</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+   {{calorie}} kcal / day <code> {{calorieMessage}} </code> 
+  </ion-card-content>
+</ion-card>
 
-<ion-item *ngIf= "bmr">
-  <h3> Carbs: {{carbohydrates}} kcal <code> {{carboMessage}} </code> 
+<ion-card *ngIf= "bmr"> 
+  <ion-card-header>
+    <ion-card-title>Carbohydrates</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+   {{carbohydrates}} kcal <code> {{carboMessage}} </code> 
+  </ion-card-content>
+</ion-card>
 
-<ion-item *ngIf= "bmr">
-  <h3> Proteins: {{proteins}} kcal <code> {{proteinsMessage}} </code> 
+<ion-card *ngIf= "bmr"> 
+  <ion-card-header>
+    <ion-card-title>Proteins</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+   {{proteins}} kcal <code> {{proteinsMessage}} </code> 
+  </ion-card-content>
+</ion-card>
 
-<ion-item *ngIf= "bmr">
-  <h3> Fats: {{fats}} kcal <code> {{fatsMessage}} </code> 
+<ion-card *ngIf= "bmr"> 
+  <ion-card-header>
+    <ion-card-title>Fats</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+   {{fats}} kcal <code> {{fatsMessage}} </code> 
+  </ion-card-content>
+</ion-card>
